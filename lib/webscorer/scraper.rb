@@ -11,5 +11,9 @@ module Webscorer
     def organizer_URL
       'https://www.webscorer.com/' + @organizer_name
     end
+
+    def organizer_page
+      Net::HTTP.get(URI(organizer_URL))
+    end
   end
 end

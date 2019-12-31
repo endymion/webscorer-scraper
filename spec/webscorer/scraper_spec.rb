@@ -13,5 +13,13 @@ RSpec.describe Webscorer::Scraper do
       webscorer = Webscorer::Scraper.new('takethebridgerun')
       expect(webscorer.organizer_URL).to eq('https://www.webscorer.com/takethebridgerun')
     end
+
+    it "can itemize the list of events for the current organizer" do
+      stub_request(:get, "https://www.webscorer.com/takethebridgerun").
+        to_return(body: File.new('spec/http_responses/organizer_page.txt'), status: 200)
+
+        webscorer = Webscorer::Scraper.new('takethebridgerun')
+        expect(webscorer.organizer_page).to include('Take The Bridge')
+    end
   end
 end
