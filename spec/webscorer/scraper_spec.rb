@@ -8,5 +8,10 @@ RSpec.describe Webscorer::Scraper do
       webscorer = Webscorer::Scraper.new('takethebridgerun')
       expect(webscorer.organizer_name).to eq('takethebridgerun')
     end
+
+    it "can generate a URL for the organizer's page" do
+      webscorer = Webscorer::Scraper.new('takethebridgerun')
+      expect(webscorer.organizer_URL).to eq('https://www.webscorer.com/takethebridgerun')
+    end
   end
 end
