@@ -3,7 +3,10 @@ RSpec.describe Webscorer::Scraper do
     expect(Webscorer::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe Webscorer::Scraper do
+    it "has an organizer_name context" do
+      webscorer = Webscorer::Scraper.new('takethebridgerun')
+      expect(webscorer.organizer_name).to eq('takethebridgerun')
+    end
   end
 end
