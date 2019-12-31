@@ -1,14 +1,14 @@
-require_relative 'lib/webscorer/scraper/version'
+require_relative 'lib/webscorer/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "webscorer-scraper"
-  spec.version       = Webscorer::Scraper::VERSION
+  spec.version       = Webscorer::VERSION
   spec.authors       = ["Ryan Porter"]
   spec.email         = ["rap@endymion.com"]
 
   spec.summary       = %q{A way to get your data from Webscorer.}
   spec.description   = %q{The Webscorer system does not have an API.  This is a (delicate) way of getting your data by scraping the web site.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.5.5")
 

@@ -1,8 +1,7 @@
-require "webscorer/scraper/version"
+require "webscorer/version"
 
 module Webscorer
-  module Scraper
-    class Error < StandardError; end
-    # Your code goes here...
+  class Scraper
+
   end
 end
