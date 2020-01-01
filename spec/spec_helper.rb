@@ -1,6 +1,8 @@
-require "bundler/setup"
-require "webscorer/scraper"
+require 'bundler/setup'
 require 'webmock/rspec'
+require 'chronic'
+
+require 'webscorer'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
